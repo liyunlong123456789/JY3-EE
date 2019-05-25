@@ -2,54 +2,75 @@ package com.neuedu.pojo;
 
 import com.sun.xml.internal.bind.v2.model.core.ID;
 
+import java.sql.Date;
+
 public class User {
 
-    public User()
-    {
+    private  String user_id;
+    private String user_name;
+    private String user_password;
+    private Date user_date;
 
-    }
-    public User(String username,String password,Integer ID)
-    {
-        this.ID = ID;
-        this.username = username;
-        this.password = password;
+    public User() {
     }
 
-    public Integer getID() {
-        return ID;
+    public User(String user_id, String user_name, String user_password, Date user_date) {
+        this.user_id = user_id;
+        this.user_name = user_name;
+        this.user_password = user_password;
+        this.user_date = user_date;
     }
 
-    public void setID(Integer ID) {
-        this.ID = ID;
+    public String getUser_id() {
+        return user_id;
     }
 
-    public String getUsername() {
-        return username;
+    public void setUser_id(String user_id) {
+        this.user_id = user_id;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public String getUser_name() {
+        return user_name;
     }
 
-    public String getPassword() {
-        return password;
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public String getUser_password() {
+        return user_password;
+    }
+
+    public void setUser_password(String user_password) {
+        this.user_password = user_password;
+    }
+
+    public Date getUser_date() {
+        return user_date;
+    }
+
+    public void setUser_date(Date user_date) {
+        this.user_date = user_date;
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "ID=" + ID +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
+                "user_id='" + user_id + '\'' +
+                ", user_name='" + user_name + '\'' +
+                ", user_password='" + user_password + '\'' +
+                ", user_date=" + user_date +
                 '}';
     }
-
-    private  Integer ID;
-    private String username;
-    private String password;
-
+    public  User (String user_id,String user_name,String user_password)
+    {
+        this.user_id = user_id;
+        this.user_name = user_name;
+        this.user_password = user_password;
+    }
+    public User (String user_name,String user_password)
+    {
+        this.user_name = user_name;
+        this.user_password = user_password;
+    }
 }

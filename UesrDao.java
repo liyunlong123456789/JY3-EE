@@ -7,8 +7,10 @@ import java.util.List;
 public interface UesrDao {
     //查询
     List<User> getAllUser();
-    //修改
-    void update(User user);
-    //删除
-    void delete(Integer ID);
+    //增加
+    void insert(User user);
+    //登录判断
+   boolean findAll(User user);
+    //注册判断
+   boolean findname(String  string);
 }

@@ -12,20 +12,20 @@ import java.io.IOException;
 
 @WebServlet(name = "DeleteServlet",urlPatterns = "/delete.do")
 public class DeleteServlet extends HttpServlet {
-    private UesrDao ud;
-
-    @Override
-    public void init() throws ServletException {
-        ud = new UserDaoImpl();
-    }
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String id  = request.getParameter("ID");
-        ud.delete(Integer.parseInt(id));
-        response.sendRedirect("user.do");
-
-    }
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doPost(request,response);
-    }
+//    private UesrDao ud;
+//
+//    @Override
+//    public void init() throws ServletException {
+//        ud = new UserDaoImpl();
+//    }
+//    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//        String id  = request.getParameter("ID");
+//        ud.delete(Integer.parseInt(id));
+//        response.sendRedirect("user.do");
+//
+//    }
+//
+//    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//        doPost(request,response);
+//    }
 }
