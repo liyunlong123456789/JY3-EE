@@ -19,17 +19,8 @@ public class FileAction {
             os = new FileOutputStream("G:\\img\\" + name);
             int buffer = 0;
             byte[] bs = new byte[1024];
-            while (true) {
-                try {
-                    if (!((buffer = inputStream.read(bs)) != -1)) break;
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                try {
-                    os.write(bs, 0, buffer);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+            while ((buffer = inputStream.read(bs)) != -1) {
+                os.write(bs, 0, buffer);
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();

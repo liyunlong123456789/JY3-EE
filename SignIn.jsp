@@ -14,7 +14,7 @@
 </head>
 <div id="signin">
     <h1>SignIn</h1>
-    <form method="post" action="signin.do">
+    <form method="post" action="signin.do" onsubmit="return ppp()">
         <input type="text" placeholder="用户名" id="ming" name="ming"></input>
         <br />
         <input type="password" placeholder="密码" id="mi" name="mi"></input>
@@ -22,17 +22,17 @@
         <input type="password" placeholder="确认密码" id="que" name="que"></input>
         <br />
 
-        <button class="but" id="zhuce">注册</button>
+        <button class="but" id="zhuce" type="submit">注册</button>
 
     </form>
 </div>
 <script>
-    window.onload = function () {
+
+    function ppp()
+    {
     var lo = /^[0-9A-Za-z]{8,12}$/;
     var p =/^[0-9A-Za-z]{6,12}$/;
     var zhu = document.getElementById("zhuce");
-    zhu.onclick = function()
-    {
         var pass = document.getElementById("ming").value;
         var ps = document.getElementById("mi").value;
         var pw = document.getElementById("que").value;
@@ -42,11 +42,13 @@
         {
         //     window.location.href ="LogIn.jsp";
         // window.event.returnValue=false;
+            return true
         }else
         {
             alert("请重新注册")
+            return  false
         }
-    }
+
     }
 </script>
 </body>

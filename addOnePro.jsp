@@ -17,11 +17,11 @@
 <form enctype="multipart/form-data" method="post" action="add.do">
     <div class="form-group">
         <label for="proName">商品名</label>
-        <input type="text" class="form-control" id="proName" placeholder="商品名" name="proName">
+        <input type="text" class="form-control" id="proName" placeholder="商品名" name="pro_name">
     </div>
     <div class="form-group">
         <label for="proPrice">商品价格</label>
-        <input type="number" class="form-control" id="proPrice" placeholder="商品价格" min="1.00" max="9999999.00" name="proPrice">
+        <input type="number" class="form-control" id="proPrice" placeholder="商品价格" min="1.00" max="9999999.00" name="pro_price">
     </div>
     <div class="form-group">
         <label for="exampleInputFile">商品图片</label>
@@ -31,24 +31,24 @@
     <div class="form-group">
         <label for="proDes">商品描述</label>
         <br />
-        <textarea placeholder="请输入商品详细信息" style="width: 100%" id="proDes" name="proDes"></textarea>
+        <textarea placeholder="请输入商品详细信息" style="width: 100%" id="proDes" name="pro_des"></textarea>
     </div>
     <div class="form-group">
         <label for="proStock">商品库存</label>
-        <input type="number" class="form-control" id="proStock" placeholder="商品库存" min="0" max="999" name="proStock">
+        <input type="number" class="form-control" id="proStock" placeholder="商品库存" min="0" max="999" name="pro_stock">
     </div>
     <div class="form-group">
         <label for="proDate">商品上架日期</label>
-        <input type="date" class="form-control" id="proDate" placeholder="商品上架日期" name="proDate">
+        <input type="date" class="form-control" id="proDate" placeholder="商品上架日期" name="pro_date">
     </div>
     <div class="form-group">
         <label for="proCateId">商品类别</label>
-        <input type="number" class="form-control" id="proCateId" placeholder="商品类别" min="1" max="999" name="proCateId">
+        <input type="number" class="form-control" id="proCateId" placeholder="商品类别" min="1" max="999" name="pro_cate_id">
     </div>
     <div class="form-group">
         <label for="proFac">商品厂家</label>
         <br />
-        <textarea placeholder="请输入商品详细出厂厂家" style="width: 100%" id="proFac" name="proFac"></textarea>
+        <textarea placeholder="请输入商品详细出厂厂家" style="width: 100%" id="proFac" name="pro_factory"></textarea>
     </div>
     <button type="submit" class="btn btn-default">确认提交</button>
 </form>
