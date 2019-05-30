@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $("form input [type=button]").click(function () {
+            $.ajax({
+                type:"POST",
+                url:"FormDemo.html",
+                data:$("form").serialize(),
+                success:function (response,status,xhr) {
+                    alert(response)
+                }
+
+            })
+        })
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+<form method="post"  >
+    <input type="text" placeholder="用户名" id="yong" name="yong"></input>
+    <br/>
+    <input type="password" placeholder="密码" id="ma" name="ma"></input>
+    <br/>
+    <button class="but" id="deng">确认登录</button>
+
+</form>
+</body>
+</html>

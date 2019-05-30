@@ -10,11 +10,27 @@
 <head>
     <title>登录页面</title>
     <link rel="stylesheet" href="CSS/SignIn.css">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $("#form input[type=button]").click(function () {
+            $.ajax({
+                type:"POST",
+                url:"login.do",
+                data:$("#form").serialize(),
+                success:function (response,status,xhr) {
+                    alert(response)
+                }
+
+            })
+        })
+
+
+    </script>
 </head>
 <body>
 <div id="signin">
     <h1>LogIn</h1>
-    <form method="post" action="login.do" >
+    <form method="post"  id="form">
         <input type="text" placeholder="用户名" id="yong" name="yong"></input>
         <br/>
         <input type="password" placeholder="密码" id="ma" name="ma"></input>
